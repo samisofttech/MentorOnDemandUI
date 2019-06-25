@@ -1,0 +1,115 @@
+{
+    "users": [
+      {
+        "name": "diksha",
+        "username": "rashmip",
+        "email": "dgautam@gmail.com",
+        "role": ["admin"],
+        "password":"password0001"
+      },
+      {
+        "name": "student",
+        "username": "studentname",
+        "email": "studentname@gmail.com",
+        "role": ["student"],
+        "password":"password01"
+      },
+      {
+        "name": "mentor",
+        "username": "mentorName",
+        "email": "mentorName@gmail.com",
+        "role": ["mentor"],
+        "password":"password01"
+      }
+    ],
+    "login":{
+        "name": "ayush",
+        "username": "ayushg",
+        "email": "ayushg@gmail.com",
+        "role": ["admin"],
+        "password":"password01"
+    },
+    "searchTrainings":[{
+      "tname":"Core Java",
+      "tDesc":"Pave your way to becoming a consummate Java programmer. Learn Java coding in a very easy step by step manner.",
+      "fees":"$300",
+      "dueIn":"6 Days",
+      "ratings":"8"
+    },
+    {
+      "tname":"AngularJS",
+      "tDesc":"Master AngularJS and the Javascript concepts behind it, design custom directives, and build a single page application.",
+      "fees":"$800",
+      "dueIn":"2 Days",
+      "ratings":"8"
+    },
+    {
+      "tname":"MongoDB",
+      "tDesc":"Master MongoDB Development for Web & Mobile Apps. CRUD Operations, Indexes, Aggregation Framework - All about MongoDB!",
+      "fees":"$150",
+      "dueIn":"3 Days",
+      "ratings":"8"
+    }],
+    "currentTrainings":[{
+      "tname":"Core Java",
+      "tDesc":"Pave your way to becoming a consummate Java programmer. Learn Java coding in a very easy step by step manner.",
+      "status":"60"
+    },
+    {
+      "tname":"AngularJS",
+      "tDesc":"Master AngularJS and the Javascript concepts behind it, design custom directives, and build a single page application.",
+      "status":"40"
+    },
+    {
+      "tname":"MongoDB",
+      "tDesc":"Master MongoDB Development for Web & Mobile Apps. CRUD Operations, Indexes, Aggregation Framework - All about MongoDB!",
+      "status":"20"
+    }],
+    "skills":[{
+      "name":"Java",
+      "duration":"2 months",
+      "prerequites":"Core Java",
+      "price":"$200"
+    },
+    {
+      "name":"AngularJS",
+      "duration":"1 months",
+      "prerequites":"Javascript",
+      "price":"$500"
+    }],
+    "maintainTrainings":[{
+      "name":"Suresh",
+      "training":"Java",
+      "amount":"$77",
+      "date":"May 15, 2019"
+    },
+    {
+      "name":"Ramesh",
+      "training":"AngualrJS",
+      "amount":"$100",
+      "date":"May 25, 2019"
+    },
+    {
+      "name":"Pooja",
+      "training":"MongoDB",
+      "amount":"$190",
+      "date":"May 05, 2019"
+    },
+    {
+      "name":"Sapna",
+      "training":"Java",
+      "amount":"$77",
+      "date":"May 15, 2019"
+    }],
+    "technologies":[{
+      "name":"Java"
+    },{
+      "name":"Spring Boot"
+    },{
+      "name":"AngualrJS"
+    },{
+      "name":"MongoDB"
+    },{
+      "name":"Java"
+    }]
+  }

@@ -25,6 +25,7 @@ import { AccountsComponent } from './admin/accounts/accounts.component';
 import { TrainingHistoryComponent } from './mentor/training-history/training-history.component';
 import { MaintainTrainingsComponent } from './mentor/maintain-trainings/maintain-trainings.component';
 import { SkillsComponent } from './user/skills/skills.component';
+import { ServiceService } from './services/service.service';
 
 @NgModule({
   declarations: [
@@ -55,7 +56,7 @@ import { SkillsComponent } from './user/skills/skills.component';
     FormsModule,
     NgbModule.forRoot()
   ],
-  providers: [],
+  providers: [ServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

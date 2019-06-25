@@ -1,3 +1,105 @@
-<p>
-  accounts works!
-</p>
+
+<!-- <div class="row">
+    <div class="col-md-12 grid-margin">
+      <div class="card card-inverse-info">
+        <div class="card-body">
+          <form class="form-sample">
+            <div class="row">
+              <div class="col-md-12">
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label">User Name</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" name="username" [(ngModel)]="block.username" />
+                  </div>
+                </div>
+              </div>
+            
+            </div>
+            
+          </form>
+          <div class="row">          
+            <div class="col-md-12">
+              <div class="form-group">
+                <button type="submit" class="btn btn-primary mr-2 pull-right" (click)="blockUsername()"><i class="fa fa-plus"></i> Block User</button>              
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> -->
+
+  <div class="row">
+      <div class="col-md-12 d-flex align-items-stretch">
+        <div class="row flex-grow">
+          <div class="col-12 grid-margin stretch-card">
+            <div class="card ">
+              <div class="card-body">
+                <h4 class="card-title">Block User</h4>
+                <div class="form-group">
+                  <div class="input-group">
+                    <input type="text" class="form-control" name="username" [(ngModel)]="block.username" placeholder="username" aria-label="username" aria-describedby="colored-addon3">
+                    
+                  </div>
+                </div>
+                <div class="row">          
+                    <div class="col-md-12">
+                      <div class="form-group">
+                        <button type="submit" class="btn btn-primary mr-2 pull-right" (click)="blockUsername()"><i class="fa fa-plus"></i> Block User</button>              
+                      </div>
+                    </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-body">
+                <h4 class="card-title">Unblock User</h4>
+                <div class="form-group">
+                  <div class="input-group">
+                    <input type="text" class="form-control" name="username" [(ngModel)]="unblock.username" placeholder="username" aria-label="username" aria-describedby="colored-addon3">
+                    
+                  </div>
+                </div>
+                <div class="row">          
+                    <div class="col-md-12">
+                      <div class="form-group">
+                        <button type="submit" class="btn btn-primary mr-2 pull-right" (click)="unblockUsername()"><i class="fa fa-plus"></i> Unblock User</button>              
+                      </div>
+                    </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+  <div class="row">
+      <div class="col-md-12 d-flex align-items-stretch">
+        <div class="row flex-grow">
+          <div class="col-12 grid-margin stretch-card">
+            <div class="card">
+              <div class="card-body">
+                <h4 class="card-title">Unblock User</h4>
+                <div class="form-group">
+                  <div class="input-group">
+                    <input type="text" class="form-control" name="username" [(ngModel)]="unblock.username" placeholder="username" aria-label="username" aria-describedby="colored-addon3">
+                    
+                  </div>
+                </div>
+                <div class="row">          
+                    <div class="col-md-12">
+                      <div class="form-group">
+                        <button type="submit" class="btn btn-primary mr-2 pull-right" (click)="unblockUsername()"><i class="fa fa-plus"></i> Unblock User</button>              
+                      </div>
+                    </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>

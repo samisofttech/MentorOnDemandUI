@@ -4,54 +4,81 @@
       <div class="card-body">
         <h4 class="card-title">Register</h4>
         <form class="form-sample">
-          <p class="card-description">
-            Personal info
-          </p>
+          
           <div class="row">
             <div class="col-md-6">
               <div class="form-group row">
-                <label class="col-sm-3 col-form-label">First Name</label>
+                <label class="col-sm-3 col-form-label">Name</label>
                 <div class="col-sm-9">
-                  <input type="text" class="form-control" />
+                  <input type="text" class="form-control" name="name" [(ngModel)]="register.name"/>
                 </div>
               </div>
             </div>
             <div class="col-md-6">
               <div class="form-group row">
-                <label class="col-sm-3 col-form-label">Last Name</label>
+                <label class="col-sm-3 col-form-label">User Name</label>
                 <div class="col-sm-9">
-                  <input type="text" class="form-control" />
+                  <input type="text" class="form-control" name="username" [(ngModel)]="register.username" />
                 </div>
               </div>
             </div>
           </div>
           <div class="row">
+            
             <div class="col-md-6">
               <div class="form-group row">
-                <label class="col-sm-3 col-form-label">Gender</label>
-                <div class="col-sm-9">
-                  <select class="form-control">
-                    <option>Male</option>
-                    <option>Female</option>
-                  </select>
+                  <label class="col-sm-3 col-form-label">Account Type</label>
+                  <div class="col-sm-9">
+                    <select class="form-control" name="skills" (change) = "changerole($event)">
+                      <option *ngFor = "let i of roletype">{{i}}</option>
+                    </select>
+                  </div>
+
+
+                <!-- <div class="col-sm-4">
+                  <div class="form-radio">
+                    <label class="form-check-label">
+                      <input type="radio" class="form-check-input" name="membershipRadios" id="membershipRadios1" value="" checked >
+                      Student
+                    </label>
+                  </div>
                 </div>
+                <div class="col-sm-5">
+                  <div class="form-radio">
+                    <label class="form-check-label">
+                      <input type="radio" class="form-check-input" name="membershipRadios" id="membershipRadios2" value="option2" >
+                      Mentor
+                    </label>
+                  </div>
+                </div> -->
               </div>
             </div>
             <div class="col-md-6">
               <div class="form-group row">
-                <label class="col-sm-3 col-form-label">Date of Birth</label>
+                <label class="col-sm-3 col-form-label">Password</label>
                 <div class="col-sm-9">
-                  <input class="form-control" placeholder="dd/mm/yyyy"/>
+                  <input type="text" class="form-control" name="password" [(ngModel)]="register.password" />
+                </div>
+              </div>
+            </div>
+            
+          </div>
+          <div class="row" *ngIf="!mentorfields">
+            <div class="col-md-6">
+              <div class="form-group row">
+                <label class="col-sm-3 col-form-label">Email</label>
+                <div class="col-sm-9">
+                  <input type="number" class="form-control" name="email" [(ngModel)]="userregister.email"/>
                 </div>
               </div>
             </div>
           </div>
-          <div class="row">
+          <div class="row" *ngIf="mentorfields">
             <div class="col-md-6">
               <div class="form-group row">
-                <label class="col-sm-3 col-form-label">Technology</label>
+                <label class="col-sm-3 col-form-label">Skills</label>
                 <div class="col-sm-9">
-                  <select class="form-control">
+                  <select class="form-control" name="skills" [(ngModel)]="register.skills" multiple>
                     <option>Java</option>
                     <option>Angular</option>
                     <option>React</option>
@@ -62,92 +89,54 @@
             </div>
             <div class="col-md-6">
               <div class="form-group row">
-                <label class="col-sm-3 col-form-label">Account Type</label>
-                <div class="col-sm-4">
-                  <div class="form-radio">
-                    <label class="form-check-label">
-                      <input type="radio" class="form-check-input" name="membershipRadios" id="membershipRadios1" value="" checked>
-                      Student
-                    </label>
-                  </div>
-                </div>
-                <div class="col-sm-5">
-                  <div class="form-radio">
-                    <label class="form-check-label">
-                      <input type="radio" class="form-check-input" name="membershipRadios" id="membershipRadios2" value="option2">
-                      Mentor
-                    </label>
-                  </div>
+                <label class="col-sm-3 col-form-label">Linkedin URL</label>
+                <div class="col-sm-9">
+                  <input type="text" class="form-control" name="linkedin" [(ngModel)]="register.linkedin" />
                 </div>
               </div>
             </div>
           </div>
-          <p class="card-description">
-            Address
-          </p>
-          <div class="row">
+          <div class="row" *ngIf="mentorfields">
             <div class="col-md-6">
               <div class="form-group row">
-                <label class="col-sm-3 col-form-label">Address 1</label>
+                <label class="col-sm-3 col-form-label">Total Experience</label>
                 <div class="col-sm-9">
-                  <input type="text" class="form-control" />
+                  <input type="number" class="form-control" name="yearsExp" [(ngModel)]="register.yearsExp"/>
                 </div>
               </div>
             </div>
             <div class="col-md-6">
               <div class="form-group row">
-                <label class="col-sm-3 col-form-label">State</label>
+                <label class="col-sm-3 col-form-label">Start Time </label>
                 <div class="col-sm-9">
-                  <input type="text" class="form-control" />
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-6">
-              <div class="form-group row">
-                <label class="col-sm-3 col-form-label">Address 2</label>
-                <div class="col-sm-9">
-                  <input type="text" class="form-control" />
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6">
-              <div class="form-group row">
-                <label class="col-sm-3 col-form-label">Postcode</label>
-                <div class="col-sm-9">
-                  <input type="text" class="form-control" />
+                  <input type="number" class="form-control" name="startTime" [(ngModel)]="register.startTime" />
                 </div>
               </div>
             </div>
           </div>
-          <div class="row">
+          <div class="row" *ngIf="mentorfields">
             <div class="col-md-6">
               <div class="form-group row">
-                <label class="col-sm-3 col-form-label">City</label>
+                <label class="col-sm-3 col-form-label">End Time</label>
                 <div class="col-sm-9">
-                  <input type="text" class="form-control" />
+                  <input type="number" class="form-control" name="endTime" [(ngModel)]="register.endTime"/>
                 </div>
               </div>
             </div>
             <div class="col-md-6">
               <div class="form-group row">
-                <label class="col-sm-3 col-form-label">Country</label>
+                <label class="col-sm-3 col-form-label">Fee</label>
                 <div class="col-sm-9">
-                  <select class="form-control">
-                    <option>America</option>
-                    <option>Italy</option>
-                    <option>Russia</option>
-                    <option>Britain</option>
-                    <option>India</option>
-                  </select>
+                  <input type="number" class="form-control" name="fee" [(ngModel)]="register.fee"/>
                 </div>
               </div>
             </div>
-            <div class="col-md-12">
-              <div class="form-group">
-                <button type="submit" class="btn btn-success mr-2" style="float:right;"><i class="fa fa-id-card-o"></i> Register</button>
-              </div>
+            
+            
+          </div>
+          <div class="col-md-12">
+            <div class="form-group">
+              <button type="submit" class="btn btn-success mr-2" style="float:right;" (click)="registerUser()"><i class="fa fa-id-card-o"></i> Register</button>
             </div>
           </div>
         </form>

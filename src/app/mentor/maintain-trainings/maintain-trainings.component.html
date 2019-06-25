@@ -1,3 +1,109 @@
-<p>
-  maintain-trainings works!
-</p>
+<div class="row">
+  <div class="col-md-12 grid-margin">
+    <div class="card card-inverse-info">
+      <div class="card-body">
+        <form class="form-sample">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group row">
+                <label class="col-sm-3 col-form-label">Facilities Offered</label>
+                <div class="col-sm-9">
+                  <input type="text" class="form-control" name="facilities_offered" [(ngModel)]="mentorskill.facilities_offered" />
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group row">
+                <label class="col-sm-3 col-form-label">Self Rating</label>
+                <div class="col-sm-9">
+                  <input type="number" class="form-control" name="self_rating" [(ngModel)]="mentorskill.self_rating" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group row">
+                <label class="col-sm-3 col-form-label">Trainings Delivered</label>
+                <div class="col-sm-9">
+                  <input type="number" class="form-control" name="trainings_delivered" [(ngModel)]="mentorskill.trainings_delivered"/>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group row">
+                <label class="col-sm-3 col-form-label">Years of Experience</label>
+                <div class="col-sm-9">
+                  <input type="number" class="form-control" name="years_of_exp" [(ngModel)]="mentorskill.years_of_exp"/>
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+        <div class="row">          
+          <div class="col-md-12">
+            <div class="form-group">
+              <button type="submit" class="btn btn-primary mr-2 pull-right" (click)="AddMentorSkills()"><i class="fa fa-plus"></i> Add</button>              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-12 grid-margin stretch-card">
+    <div class="card">
+      <div class="card-body">
+        <h4 class="card-title">Training Proposals </h4>
+        <div class="template-demo">
+          <table class="table mb-0">
+            <thead>
+              <tr>
+                <th class="pl-0">Technology</th>
+                <th class="pl-0">Duration</th>
+                <th class="pl-0">Price</th>
+                <th class="pl-0">Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- <tr *ngFor="let skills of historyDetails">
+                <td class="pl-0">{{History.skillname}}</td>
+                <td class="pr-0">{{History.duration}}</td>
+                <td class="pl-0">{{skills.price}}</td>
+              </tr> -->
+              <tr >
+                <td class="pl-0">Angular</td>
+                <td class="pr-0">2 Months</td>
+                <td class="pl-0">$300</td>
+                <td class="pl-0">
+                   <button type="submit" class="btn btn-primary mr-2" (click)="accept()"><i class="fa fa-plus"></i> Accept</button>              
+                   <button type="submit" class="btn btn-primary mr-2" (click)="reject()"><i class="fa fa-minus"></i> Reject</button>              
+               </td>
+              </tr>
+              <tr >
+                <td class="pl-0">Core Java</td>
+                <td class="pr-0">3 Months</td>
+                <td class="pl-0">$400</td>
+                <td class="pl-0">
+                    <button type="submit" class="btn btn-primary mr-2" (click)="accept()"><i class="fa fa-plus"></i> Accept</button>              
+                    <button type="submit" class="btn btn-primary mr-2" (click)="reject()"><i class="fa fa-minus"></i> Reject</button>              
+                </td>
+              </tr>
+              <tr >
+                <td class="pl-0">Node JS</td>
+                <td class="pr-0">2 Months</td>
+                <td class="pl-0">$250</td>
+                <td class="pl-0">
+                    <button type="submit" class="btn btn-primary mr-2" (click)="accept()"><i class="fa fa-plus"></i> Accept</button>              
+                    <button type="submit" class="btn btn-primary mr-2" (click)="reject()"><i class="fa fa-minus"></i> Reject</button>              
+                </td>
+              </tr>
+             
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

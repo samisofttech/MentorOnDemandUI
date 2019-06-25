@@ -1,42 +1,55 @@
 <div class="row">
   <div class="col-md-12 grid-margin">
-    <div class="card">
+    <div class="card card-inverse-info">
       <div class="card-body">
-        <div class="row">
-          <div class="col-md-6">
-            <p class="card-description">
-              Add Skill
-            </p>
-            <input id="typeahead-focus" type="text" class="form-control" [(ngModel)]="typeaheadFocusModel"
-              [ngbTypeahead]="focusSearch" (focus)="focus$.next($event.target.value)"
-              (click)="click$.next($event.target.value)" #instance="ngbTypeahead"/>
-          </div>
-          <div class="col-md-6">
-            <p class="card-description">
-              Level
-            </p>
-            <div class="form-group row">
-              <div class="col-sm-9">
-                <select class="form-control">
-                  <option>New</option>
-                  <option>Beginner</option>
-                  <option>Experienced</option>
-                  <option>Expert</option>
-                </select>
+        <form class="form-sample">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group row">
+                <label class="col-sm-3 col-form-label">Skill Name</label>
+                <div class="col-sm-9">
+                  <input type="text" class="form-control" name="skillname" [(ngModel)]="skill.skillname" />
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group row">
+                <label class="col-sm-3 col-form-label">Price</label>
+                <div class="col-sm-9">
+                  <input type="text" class="form-control" name="price" [(ngModel)]="skill.price" />
+                </div>
               </div>
             </div>
           </div>
-        </div>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group row">
+                <label class="col-sm-3 col-form-label">Prerequites</label>
+                <div class="col-sm-9">
+                  <input type="text" class="form-control" name="prerequites" [(ngModel)]="skill.prerequites"/>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group row">
+                <label class="col-sm-3 col-form-label">Duration</label>
+                <div class="col-sm-9">
+                  <input class="form-control" name="duration" [(ngModel)]="skill.duration"/>
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
         <div class="row">          
           <div class="col-md-12">
             <div class="form-group">
-              <button type="submit" class="btn btn-success mr-2" style="float:right;"><i class="fa fa-plus"></i> Add</button>
+              <button type="submit" class="btn btn-primary mr-2 pull-right" (click)="submitAdd()"><i class="fa fa-plus"></i> Add</button>              
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div> 
+  </div>
 </div>
 <div class="row">
   <div class="col-md-12 grid-margin stretch-card">
@@ -48,26 +61,19 @@
             <thead>
               <tr>
                 <th class="pl-0">Skill</th>
-                <th class="text-right">Level</th>
+                <th class="pl-0">Duration</th>
+                <th class="pl-0">Prerequites</th>
+                <th class="pl-0">Price</th>
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td class="pl-0">AngularJS</td>
-                <td class="pr-0 text-right"><div class="badge badge-primary">Beginner</div></td>
+              <tr *ngFor="let skills of tableDetails">
+                <td class="pl-0">{{skills.skillname}}</td>
+                <td class="pr-0">{{skills.duration}}</td>
+                <td class="pl-0">{{skills.prerequites}}</td>
+                <td class="pl-0">{{skills.price}}</td>
               </tr>
-              <tr>
-                <td class="pl-0">Java</td>
-                <td class="pr-0 text-right"><div class="badge badge-info">Experienced</div></td>
-              </tr>
-              <tr>
-                <td class="pl-0">Mongo DB</td>
-                <td class="pr-0 text-right"><div class="badge badge-success">Expert</div></td>
-              </tr>
-              <tr>
-                <td class="pl-0">RabitMQ</td>
-                <td class="pr-0 text-right"><div class="badge badge-warning">New</div></td>
-              </tr>
+             
             </tbody>
           </table>
         </div>
